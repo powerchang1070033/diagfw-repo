@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env/
+.envrc
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Artifacts & streams
+artifacts/
+streams/

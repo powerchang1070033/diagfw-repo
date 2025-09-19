@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diagfw"
+version = "0.1.0"
+description = "Diagnostic framework with streaming, UART, and iperf helpers"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="Your Name"}]
+license = {text = "MIT"}
+dependencies = [
+  "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+  "black>=24.0",
+  "ruff>=0.5.0",
+  "mypy>=1.7.0",
+  "build>=1.0.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
